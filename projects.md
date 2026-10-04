@@ -1,7 +1,4 @@
 # Projects
-This section documents my data science projects, research questions, and data stories I create throughout the semester.
 
----
-
-## Project 1
-Coming soon.
+- [Project 1: Cost and completion at North Carolina public universities](index.html#project)
+- [Project 2: Predicting online purchase intention](project-two.html)

@@ -1,0 +1,167 @@
+{
+  "source": {
+    "name": "UCI Online Shoppers Purchasing Intention Dataset",
+    "doi": "10.24432/C5F88Q",
+    "rows": 12330,
+    "features": 17,
+    "missing_values": 0,
+    "exact_duplicate_rows": 125
+  },
+  "target": {
+    "purchases": 1908,
+    "non_purchases": 10422,
+    "purchase_rate": 0.1547
+  },
+  "split": {
+    "train_rows": 9864,
+    "test_rows": 2466,
+    "random_state": 42,
+    "strategy": "80/20 stratified holdout; 5-fold stratified CV on training data only"
+  },
+  "best_parameters": {
+    "logistic_regression": {
+      "model__C": 0.1
+    },
+    "random_forest": {
+      "model__max_depth": 8,
+      "model__max_features": 0.5,
+      "model__min_samples_leaf": 3
+    }
+  },
+  "test_metrics": [
+    {
+      "model": "Majority baseline",
+      "accuracy": 0.8451,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "average_precision": 0.1549,
+      "confusion_matrix": [
+        [
+          2084,
+          0
+        ],
+        [
+          382,
+          0
+        ]
+      ]
+    },
+    {
+      "model": "Logistic regression",
+      "accuracy": 0.8451,
+      "balanced_accuracy": 0.8015,
+      "precision": 0.5,
+      "recall": 0.7382,
+      "f1": 0.5962,
+      "roc_auc": 0.8949,
+      "average_precision": 0.625,
+      "confusion_matrix": [
+        [
+          1802,
+          282
+        ],
+        [
+          100,
+          282
+        ]
+      ]
+    },
+    {
+      "model": "Random forest",
+      "accuracy": 0.8662,
+      "balanced_accuracy": 0.8332,
+      "precision": 0.5474,
+      "recall": 0.7853,
+      "f1": 0.6452,
+      "roc_auc": 0.9311,
+      "average_precision": 0.7379,
+      "confusion_matrix": [
+        [
+          1836,
+          248
+        ],
+        [
+          82,
+          300
+        ]
+      ]
+    }
+  ],
+  "pagevalues_sensitivity": {
+    "accuracy": 0.6946,
+    "balanced_accuracy": 0.6857,
+    "precision": 0.2904,
+    "recall": 0.6728,
+    "f1": 0.4057,
+    "roc_auc": 0.7584,
+    "average_precision": 0.3448
+  },
+  "top_permutation_features": [
+    {
+      "feature": "PageValues",
+      "importance": 0.5269
+    },
+    {
+      "feature": "Month",
+      "importance": 0.0579
+    },
+    {
+      "feature": "ExitRates",
+      "importance": 0.0495
+    },
+    {
+      "feature": "BounceRates",
+      "importance": 0.0418
+    },
+    {
+      "feature": "Administrative",
+      "importance": 0.0211
+    },
+    {
+      "feature": "ProductRelated",
+      "importance": 0.0188
+    },
+    {
+      "feature": "ProductRelated_Duration",
+      "importance": 0.0149
+    },
+    {
+      "feature": "Administrative_Duration",
+      "importance": 0.0068
+    },
+    {
+      "feature": "TrafficType",
+      "importance": 0.0047
+    },
+    {
+      "feature": "VisitorType",
+      "importance": 0.0011
+    }
+  ],
+  "visitor_type_error_check": [
+    {
+      "visitor_type": "New_Visitor",
+      "sessions": 347,
+      "purchases": 89,
+      "recall": 0.7640449438202247,
+      "precision": 0.8395061728395061
+    },
+    {
+      "visitor_type": "Other",
+      "sessions": 11,
+      "purchases": 3,
+      "recall": 1.0,
+      "precision": 1.0
+    },
+    {
+      "visitor_type": "Returning_Visitor",
+      "sessions": 2108,
+      "purchases": 290,
+      "recall": 0.7896551724137931,
+      "precision": 0.49353448275862066
+    }
+  ]
+}
