@@ -386,6 +386,21 @@ def main() -> None:
             "non_purchases": int((~y).sum()),
             "purchase_rate": round(float(y.mean()), 4),
         },
+        "exploratory_summary": {
+            feature: {
+                "median_no_purchase": round(float(df.loc[~y, feature].median()), 4),
+                "median_purchase": round(float(df.loc[y, feature].median()), 4),
+                "overall_95th_percentile": round(float(df[feature].quantile(0.95)), 4),
+                "overall_maximum": round(float(df[feature].max()), 4),
+            }
+            for feature in [
+                "Administrative",
+                "ProductRelated",
+                "ProductRelated_Duration",
+                "ExitRates",
+                "PageValues",
+            ]
+        },
         "split": {
             "train_rows": int(len(X_train)),
             "test_rows": int(len(X_test)),

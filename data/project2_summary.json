@@ -12,6 +12,38 @@
     "non_purchases": 10422,
     "purchase_rate": 0.1547
   },
+  "exploratory_summary": {
+    "Administrative": {
+      "median_no_purchase": 0.0,
+      "median_purchase": 2.0,
+      "overall_95th_percentile": 9.0,
+      "overall_maximum": 27.0
+    },
+    "ProductRelated": {
+      "median_no_purchase": 16.0,
+      "median_purchase": 29.0,
+      "overall_95th_percentile": 109.0,
+      "overall_maximum": 705.0
+    },
+    "ProductRelated_Duration": {
+      "median_no_purchase": 510.19,
+      "median_purchase": 1109.9062,
+      "overall_95th_percentile": 4300.2891,
+      "overall_maximum": 63973.5222
+    },
+    "ExitRates": {
+      "median_no_purchase": 0.0286,
+      "median_purchase": 0.016,
+      "overall_95th_percentile": 0.2,
+      "overall_maximum": 0.2
+    },
+    "PageValues": {
+      "median_no_purchase": 0.0,
+      "median_purchase": 16.7581,
+      "overall_95th_percentile": 38.1605,
+      "overall_maximum": 361.7637
+    }
+  },
   "split": {
     "train_rows": 9864,
     "test_rows": 2466,

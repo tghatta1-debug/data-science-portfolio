@@ -43,6 +43,9 @@
 .takeaway-grid h3{font-size:1.45rem;margin:28px 0 12px}
 .takeaway-grid p{color:var(--muted);margin:0;font-size:.94rem}
 .numbered-section{display:grid;grid-template-columns:85px minmax(0,1fr);gap:28px}
+.bridge-section{padding:58px 38px!important;background:#e8edeb;border-left:3px solid var(--accent)}
+.bridge-section h2{font-size:clamp(2.2rem,4vw,3.7rem);letter-spacing:-.025em;max-width:900px}
+.bridge-section p:last-child{max-width:850px;color:#405164}
 .section-number{font-family:"Iowan Old Style",Baskerville,serif;font-size:3.2rem;line-height:1;color:#c8d0d2;margin:0}
 .numbered-section>div>p:not(.eyebrow):not(.method-note){font-size:1.05rem;max-width:850px;color:#405164}
 .numbered-section strong{color:var(--ink)}
